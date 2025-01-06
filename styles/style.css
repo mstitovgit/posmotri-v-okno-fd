@@ -153,6 +153,7 @@ ol {
 }
 
 .content__card-link {
+  display: block;
   color: #ffffff;
   text-decoration: none;
 }
@@ -296,10 +297,6 @@ ol {
 .more-button {
   width: calc(100% - 6px); /* чтобы обводка кнопки в фокусе была видна */
   margin-bottom: 3px; /* чтобы обводка кнопки в фокусе была видна */
-}
-
-.content__card-link {
-  display: block;
 }
 
 .content__card-link_current {
