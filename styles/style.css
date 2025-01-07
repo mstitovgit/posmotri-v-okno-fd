@@ -81,6 +81,7 @@ ol {
   flex-direction: column;
   grid-area: content__details;
   gap: 26px;
+  align-self: start;
 }
 
 .content__list-container {
@@ -105,6 +106,7 @@ ol {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
 }
 
 .content__list {
@@ -132,15 +134,15 @@ ol {
 }
 
 .search-form__fieldset-title {
-  font-family: Fira Sans Condensed;
+  font-family: Fira Sans Condensed, sans-serif;
   font-weight: 400;
   font-size: 18px;
-  line-height: 120%;
+  line-height: 120%; 
   text-align: left;
 }
 
 .title {
-  font-family: Oswald;
+  font-family: Oswald, sans-serif;
   font-weight: 700;
   font-size: 75px;
   line-height: 94%;
@@ -159,19 +161,22 @@ ol {
 }
 
 .content__video-card-title {
-  margin-bottom: 6px;
-  font-family: Oswald;
+  max-width: 196px;
+  margin-bottom: 1px; /* меньше, чем в макете, из-за увеличенного line-height */
+  overflow: hidden;
+  font-family: Oswald, sans-serif;
   font-weight: 700;
   font-size: 30px;
-  line-height: 30px;
+  line-height: 120%;  /* больше, чем в макете, чтобы не обрезало буквы */
   text-transform: uppercase;
   text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .content__video-card-description {
   display: -webkit-box;
   overflow: hidden;
-  font-family: Fira Sans Condensed;
+  font-family: Fira Sans Condensed, sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 16.2px;
@@ -195,16 +200,18 @@ ol {
 
 .search-form__label {
   display: flex;
+  align-items: center;
   width: fit-content;
+  cursor: pointer;
 }
 
 .search-form__textfield {
-  width: 225px;
+  min-width: 225px;
   border: none;
   border-top: 1px solid #ffffff;
   border-bottom: 1px solid #ffffff;
   color: #ffffff;
-  font-family: Fira Sans Condensed;
+  font-family: Fira Sans Condensed, sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 120%;
@@ -263,7 +270,7 @@ ol {
   border: 1px solid #ffffff;
   padding: 6px 0px;
   color: #ffffff;
-  font-family: Fira Sans Condensed;
+  font-family: Fira Sans Condensed, sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 120%;
@@ -291,12 +298,16 @@ ol {
 
 .search-form__submit-button {
   align-self: flex-end;
-  width: 194px;
+  min-width: 194px;
 }
 
 .more-button {
   width: calc(100% - 6px); /* чтобы обводка кнопки в фокусе была видна */
   margin-bottom: 3px; /* чтобы обводка кнопки в фокусе была видна */
+}
+
+.content__card-link:active {
+  background-color: #545050;
 }
 
 .content__card-link_current {
