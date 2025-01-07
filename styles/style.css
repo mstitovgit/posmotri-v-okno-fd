@@ -74,6 +74,7 @@ ol {
 
 .result {
   grid-area: result;
+  margin-top: 78px;
 }
 
 .content__details {
@@ -137,7 +138,7 @@ ol {
   font-family: Fira Sans Condensed, sans-serif;
   font-weight: 400;
   font-size: 18px;
-  line-height: 120%; 
+  line-height: 120%;
   text-align: left;
 }
 
@@ -167,7 +168,7 @@ ol {
   font-family: Oswald, sans-serif;
   font-weight: 700;
   font-size: 30px;
-  line-height: 120%;  /* больше, чем в макете, чтобы не обрезало буквы */
+  line-height: 120%; /* больше, чем в макете, чтобы не обрезало буквы */
   text-transform: uppercase;
   text-overflow: ellipsis;
   white-space: nowrap;
